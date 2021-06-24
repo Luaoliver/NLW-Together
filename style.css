@@ -1,3 +1,71 @@
-body {
-  background-color: hsl(159, 38%, 67%); /* cor de fundo */
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- VARIBLES ---------- */
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+/* ---------- BASE ---------- */
+body {
+  font: 400 1rem 'DM Sans', sans-serif; /* peso tamanho font-family, "ou então" */
+  color: var(--text-color);
+  background-color: var(--body-color);
+  -webkit-font-smoothing: antialiased; /* se o navegador for tipo webkit a função é aplicada */
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+}
+
+/* ---------- LAYOUT ---------- */
+#header {
+}
+
+nav {
+  height: 4.5rem;
+  display: flex; /* um elemento ao lado do outro */
+  align-items: center; /* alinhamento */
+  justify-content: space-between; /* cada elemento para um canto */
+}
+
+.logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* ---------- HOME ---------- */
