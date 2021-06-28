@@ -49,6 +49,7 @@ h1 {
 
 /* ---------- LAYOUT ---------- */
 #header {
+  border-bottom: 1px solid #e4e4e4;
 }
 
 nav {
@@ -60,6 +61,11 @@ nav {
 
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
 }
 
 .container {
@@ -68,4 +74,25 @@ nav {
   margin-right: 1.5rem;
 }
 
+.grid {
+  display: grid; /* habilita novas funcionalidade do css */
+  gap: 2rem; /* gap adiciona espaços padrões entre elementos de tipos diferentes */
+}
+
+.section {
+  padding: 5rem 0;
+}
+
 /* ---------- HOME ---------- */
+#home .container {
+  margin: 0;
+}
+
+#home .image img {
+  position: relative; /* */
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
