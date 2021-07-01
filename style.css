@@ -98,14 +98,11 @@ h1 {
   background-color: var(--body-color);
 }
 
-nav {
-  height: var(--header-height);
-  display: flex; /* elements side by side */
-  width: 100%;
-  align-items: center;
-  justify-content: space-between; /* each element on one side */
+main {
+  margin-top: var(--header-height);
 }
 
+/* ---------- LOGO ---------- */
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
@@ -115,8 +112,13 @@ nav {
   color: var(--base-color);
 }
 
-main {
-  margin-top: var(--header-height);
+/* ---------- NAVIGATION ---------- */
+nav {
+  height: var(--header-height);
+  display: flex; /* elements side by side */
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; /* each element on one side */
 }
 
 /* ---------- HOME ---------- */
