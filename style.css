@@ -35,6 +35,10 @@ img {
 }
 
 /* ---------- BASE ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif; /* weight size "font-family", 'or else' */
   color: var(--text-color);
