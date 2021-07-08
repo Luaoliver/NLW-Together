@@ -4,6 +4,8 @@ const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 // 'querySelectorAll' is a resource that receives *All* matching css selectors
 
+const links = document.querySelectorAll('nav ul li a')
+
 for (const element of toggle) {
   element.addEventListener('click', function () {
     nav.classList.toggle('show')
@@ -13,3 +15,9 @@ for (const element of toggle) {
   // The first argument passed is the event, in this case is the 'click'. The second is the function, in this case it is the anonymous function, represents what will be accomplished
 }
 // for each element corresponding to the alternator, this series of actions will be performed
+
+for (const link of links) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('show')
+  })
+}
