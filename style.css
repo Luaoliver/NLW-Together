@@ -127,6 +127,10 @@ body {
   background-color: var(--body-color);
 }
 
+#header.scroll {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* horizontal vetical blur espalhamento  */
+}
+
 main {
   margin-top: calc(var(--header-height) + 2rem);
 }
@@ -183,6 +187,12 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden; /* it is no longer visible */
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /* ---------- SHOW MENU ---------- */
@@ -207,6 +217,10 @@ nav.show ul.grid {
   gap: 4rem;
 }
 
+nav.show .menu ul {
+  display: grid;
+}
+
 /* ---------- TOGGLE MENU ---------- */
 .toggle {
   color: var(--base-color);
@@ -219,12 +233,16 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
+  top: -1.5rem;
   right: 1.5rem;
+
+  transition: 0.2s;
 }
 
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 /* ---------- HOME ---------- */
