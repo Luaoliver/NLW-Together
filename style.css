@@ -42,7 +42,7 @@ html {
 body {
   font: 400 1rem 'DM Sans', sans-serif; /* weight size "font-family", 'or else' */
   color: var(--text-color);
-  background-color: var(--body-color);
+  background: var(--body-color);
   -webkit-font-smoothing: antialiased; /* if the browser is webkit type the function is applied */
 }
 
@@ -55,10 +55,10 @@ body {
 .button {
   background-color: var(--base-color);
   color: var(--text-color-light);
+  height: 3.5rem;
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
-  height: 3.5rem;
   border-radius: 0.25rem;
   font: 500 1rem 'DM Sans', sans-serif;
   transition: background 0.3s; /* hover transition*/
@@ -66,7 +66,7 @@ body {
 
 .button:hover {
   /* when the mouse is over the element */
-  background-color: var(--base-color-alt);
+  background: var(--base-color-alt);
 }
 
 .divider-1 {
@@ -128,7 +128,7 @@ body {
 }
 
 #header.scroll {
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* horizontal vetical blur espalhamento  */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15); /* horizontal vetical blur espalhamento  */
 }
 
 main {
@@ -213,12 +213,12 @@ nav.show .menu {
   place-content: center;
 }
 
-nav.show ul.grid {
-  gap: 4rem;
-}
-
 nav.show .menu ul {
   display: grid;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 /* ---------- TOGGLE MENU ---------- */
