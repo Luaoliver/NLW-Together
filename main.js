@@ -6,11 +6,6 @@ const toggle = document.querySelectorAll('nav .toggle')
 
 const links = document.querySelectorAll('nav ul li a')
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-const backToTopButton = document.querySelector('.back-to-top')
-
 for (const element of toggle) {
   element.addEventListener('click', function () {
     nav.classList.toggle('show')
@@ -27,13 +22,17 @@ for (const link of links) {
   })
 }
 
-window.addEventListener('scroll', function () {
+/* Change header on scroll */
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 /* Testimonials slider swiper */
 const swiper = new Swiper('.swiper-container', {
@@ -65,10 +64,18 @@ scrollReveal.reveal(
 )
 
 /* Back to top */
-window.addEventListener('scroll', function () {
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
   if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+
+/* When Scroll */
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
 })
