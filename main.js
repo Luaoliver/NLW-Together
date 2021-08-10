@@ -9,6 +9,8 @@ const links = document.querySelectorAll('nav ul li a')
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
+const backToTopButton = document.querySelector('.back-to-top')
+
 for (const element of toggle) {
   element.addEventListener('click', function () {
     nav.classList.toggle('show')
@@ -60,3 +62,12 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
 )
+
+/* Back to top */
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})

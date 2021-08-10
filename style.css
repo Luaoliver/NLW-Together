@@ -494,4 +494,13 @@ footer .social a {
 
   font-size: 1.5rem;
   line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
 }
